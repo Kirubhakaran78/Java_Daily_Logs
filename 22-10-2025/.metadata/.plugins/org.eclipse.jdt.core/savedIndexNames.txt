@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+C:\Users\kirub\OneDrive\Desktop\Agaram_Work\Java_Daily_Log\.metadata\.plugins\org.eclipse.jdt.core
-3413270776.index
-1910871276.index
-1865797976.index
