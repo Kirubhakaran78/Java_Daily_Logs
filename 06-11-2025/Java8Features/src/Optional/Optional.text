@@ -1,0 +1,10 @@
+| Method                | Description                          | Example                              |
+| --------------------- | ------------------------------------ | ------------------------------------ |
+| `of(value)`           | Creates Optional with non-null value | `Optional.of("Hi")`                  |
+| `ofNullable(value)`   | Accepts null also                    | `Optional.ofNullable(null)`          |
+| `empty()`             | Creates empty Optional               | `Optional.empty()`                   |
+| `isPresent()`         | Checks if value exists               | `opt.isPresent()`                    |
+| `get()`               | Returns value (throws if empty)      | `opt.get()`                          |
+| `orElse(default)`     | Returns value or default             | `opt.orElse("Guest")`                |
+| `orElseGet(Supplier)` | Lazy version of orElse               | `opt.orElseGet(() -> "Generated")`   |
+| `ifPresent(Consumer)` | Executes code if value exists        | `opt.ifPresent(System.out::println)` |

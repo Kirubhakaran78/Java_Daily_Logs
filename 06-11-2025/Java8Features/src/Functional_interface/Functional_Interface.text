@@ -1,0 +1,7 @@
+| Interface             | Method              | Input          | Output                     | Example Use                  |
+| --------------------- | ------------------- | -------------- | -------------------------- | ---------------------------- |
+| `Predicate<T>`        | `boolean test(T t)` | Takes a value  | Returns `true/false`       | Used for filtering           |
+| `Function<T, R>`      | `R apply(T t)`      | Takes a value  | Returns another value      | Used for mapping/conversion  |
+| `Consumer<T>`         | `void accept(T t)`  | Takes a value  | Does something (no return) | Used for printing or logging |
+| `Supplier<T>`         | `T get()`           | Takes nothing  | Returns a value            | Used for lazy initialization |
+| `BiFunction<T, U, R>` | `R apply(T t, U u)` | Takes 2 values | Returns a value            | Used for combining data      |

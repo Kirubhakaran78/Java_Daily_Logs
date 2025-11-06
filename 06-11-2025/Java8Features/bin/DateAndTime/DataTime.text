@@ -1,0 +1,6 @@
+| Concept             | Java Class      | Contains                                   | Example                                | Real-world Analogy                                                |
+| ------------------- | --------------- | ------------------------------------------ | -------------------------------------- | ----------------------------------------------------------------- |
+| 📅 Date & Time      | `LocalDateTime` | Date + Time (no zone)                      | `2025-11-06T10:30`                     | A wall clock — shows local time, but you don’t know *where* it is |
+| 🌍 Time Zone        | `ZoneId`        | Geographical region (offset rules)         | `"Asia/Kolkata"`                       | The city name or region (e.g., “India”)                           |
+| ⏰ Instant           | `Instant`       | A single moment on the global UTC timeline | `2025-11-06T05:00:00Z`                 | A timestamp — same worldwide                                      |
+| 🕰️ Zoned Date-Time | `ZonedDateTime` | LocalDateTime + ZoneId + Offset            | `2025-11-06T10:30+05:30[Asia/Kolkata]` | A clock showing correct local time in a specific city             |

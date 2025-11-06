@@ -1,0 +1,20 @@
+Streams let you process data in a functional style — i.e., no loops, no temp variables, just pipeline operations.
+
+Think of it like an assembly line:
+
+Data enters → gets filtered → transformed → collected.
+
+
+| Operation    | Type         | Description                                            | Example                         |
+| ------------ | ------------ | ------------------------------------------------------ | ------------------------------- |
+| `filter()`   | Intermediate | Selects elements based on condition (uses `Predicate`) | `.filter(n -> n > 5)`           |
+| `map()`      | Intermediate | Transforms elements (uses `Function`)                  | `.map(n -> n * 2)`              |
+| `sorted()`   | Intermediate | Sorts the stream                                       | `.sorted()`                     |
+| `distinct()` | Intermediate | Removes duplicates                                     | `.distinct()`                   |
+| `limit(n)`   | Intermediate | Takes first `n` elements                               | `.limit(3)`                     |
+| `collect()`  | Terminal     | Collects stream back into a collection                 | `.collect(Collectors.toList())` |
+| `forEach()`  | Terminal     | Performs action on each element (uses `Consumer`)      | `.forEach(System.out::println)` |
+| `reduce()`   | Terminal     | Combines all elements into one (sum, max, etc.)        | `.reduce(0, (a,b) -> a+b)`      |
+
+
+terminal meaning it ends the stream pipeline and returns a value.
