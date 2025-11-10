@@ -1,0 +1,40 @@
+.sidebar-main{
+    background-color: #0049B2;
+}
+
+.sidebar-btn {
+  color: #ADD8E6;           /* for react-icons */
+  transition: color 0.2s ease;
+}
+
+.sidebar-btn:hover {
+  color: white;
+  transform: scale(2);
+}
+
+.sidebar-btn-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar-label {
+  position: absolute;
+  bottom: -20px;
+  left:4px;
+  /* background-color: rgba(13, 86, 243, 0.911); */
+  color: white;
+
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.sidebar-btn-wrapper:hover .sidebar-label {
+  opacity: 1;
+}
