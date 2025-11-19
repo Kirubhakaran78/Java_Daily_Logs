@@ -1,0 +1,71 @@
+-- Create a sequence starting at 101
+CREATE SEQUENCE emp_id_seq START 101;
+
+
+-- 1. EMPLOYEE Table
+create table  employee (
+    id serial primary key,
+    emp_id text unique default 'EMP' || nextval('emp_id_seq'),
+    emp_name varchar(100) not null,
+    emp_email varchar(100) ,
+    product_name varchar(50),
+    emp_role varchar(50),
+    site varchar(50),
+    is_active boolean default false,
+    date_of_joining date
+);
+
+-- 2. PRODUCT Table
+create sequence product_id_seq start 101;
+
+create table product (
+    id serial primary key,
+    product_id text unique default 'PROD' || nextval('product_id_seq'),
+    product_name varchar(50) not null,
+    budget_per_annum decimal(15, 2),
+    total_employees integer default 0,
+    team_lead_name varchar(100)
+);
+
+-- 3. REVENUE Table
+create sequence revenue_id_seq start 101;
+
+create table revenue (
+    id serial primary key,
+    revenue_id text unique default 'REV' || nextval('revenue_id_seq'),
+    product_name varchar(50)not null,
+    month_year varchar(20) not null,
+    revenue_amount decimal(15, 2),
+    expense_amount decimal(15, 2),
+    profit decimal(15, 2),
+    client_name varchar(100)
+);
+
+create table  loginTable (
+id serial primary key,
+username varchar(150) unique,
+password varchar(255),
+role varchar(50)
+);
+
+select * from loginTable;
+select * from employee;
+select * from product;
+select * from revenue;
+
+
+alter table loginTable add column product_name VARCHAR(50);
+
+drop table if exists loginTable;
+
+drop table if exists employee;
+drop table if exists product;
+drop table if exists revenue;
+
+-- test users
+insert into loginTable (username, password, role, product_name) values
+('admin', 'admin123', 'ADMIN', null),
+('manager_lims', 'manager123', 'MANAGER', 'LIMS'),
+('manager_sdms', 'manager123', 'MANAGER', 'SDMS'),
+('emp_lims', 'emp123', 'EMPLOYEE', 'LIMS'),
+('emp_sdms', 'emp123', 'EMPLOYEE', 'SDMS');

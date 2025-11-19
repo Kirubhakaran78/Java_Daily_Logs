@@ -1,0 +1,30 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 70px;
+  right: 0;
+  z-index: 1030;
+  background-color: #ffffff !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  min-width: 250px;
+}
+
+#hamburger-dropdown {
+  background-color: transparent !important;
+  border: none !important;
+  color: #495057 !important;
+}
+
+#hamburger-dropdown:hover {
+  color: #1A73E8 !important;
+}
+
+#hamburger-dropdown:focus {
+  box-shadow: none !important;
+}

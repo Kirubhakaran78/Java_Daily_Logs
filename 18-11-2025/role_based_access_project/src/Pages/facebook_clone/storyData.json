@@ -1,0 +1,100 @@
+[
+  {
+    "id": "1",
+    "profilePic": "https://randomuser.me/api/portraits/men/12.jpg",
+    "storyVid": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+    "username": "Ethan Scott"
+  },
+  {
+    "id": "2",
+    "profilePic": "https://randomuser.me/api/portraits/women/15.jpg",
+    "storyVid": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+    "username": "Sophie Turner"
+  },
+  {
+    "id": "3",
+    "profilePic": "https://randomuser.me/api/portraits/men/45.jpg",
+    "storyVid": "https://samplelib.com/lib/preview/mp4/sample-20s.mp4",
+    "username": "Aaron Williams"
+  },
+  {
+    "id": "4",
+    "profilePic": "https://randomuser.me/api/portraits/women/22.jpg",
+    "storyVid": "https://samplelib.com/lib/preview/mp4/sample-30s.mp4",
+    "username": "Emily Roberts"
+  },
+  {
+    "id": "5",
+    "profilePic": "https://randomuser.me/api/portraits/men/21.jpg",
+    "storyVid": "https://samplelib.com/lib/preview/mp4/sample-30s.mp4",
+    "username": "Liam Johnson"
+  },
+  {
+    "id": "6",
+    "profilePic": "https://randomuser.me/api/portraits/women/29.jpg",
+    "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Ava Martinez"
+  },
+  {
+    "id": "7",
+    "profilePic": "https://randomuser.me/api/portraits/men/66.jpg",
+   "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Michael Brown"
+  },
+  {
+    "id": "8",
+    "profilePic": "https://randomuser.me/api/portraits/women/32.jpg",
+    "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Olivia Sharma"
+  },
+  {
+    "id": "9",
+    "profilePic": "https://randomuser.me/api/portraits/men/38.jpg",
+    "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Jacob Carter"
+  },
+  {
+    "id": "10",
+    "profilePic": "https://randomuser.me/api/portraits/women/47.jpg",
+    "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Mia Taylor"
+  },
+  {
+    "id": "11",
+    "profilePic": "https://randomuser.me/api/portraits/men/57.jpg",
+    "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Benjamin Clark"
+  },
+  {
+    "id": "12",
+    "profilePic": "https://randomuser.me/api/portraits/women/12.jpg",
+   "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Layla Kim"
+  },
+  {
+    "id": "13",
+    "profilePic": "https://randomuser.me/api/portraits/men/76.jpg",
+    "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Lucas Bennett"
+  },
+  {
+    "id": "14",
+    "profilePic": "https://randomuser.me/api/portraits/women/61.jpg",
+    "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Zara Patel"
+  },
+  {
+    "id": "15",
+    "profilePic": "https://randomuser.me/api/portraits/men/84.jpg",
+   "storyVid": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "username": "Nathan Ross"
+  }
+ 
+]
+
+
+
+
+
+
+

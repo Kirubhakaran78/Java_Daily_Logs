@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import config from "../config.json"
 
-function UserTable() {
+function UserTable({reload}) {
+    //config url path variables
+    const baseUrl=config.API_BASE_URL;
+
     const [users, setusers] = useState([]);
 
-    useEffect(() => {
-        axios.get("http://localhost:8082/api/users/fetchAllEmp")
+
+    const fetchUsers=()=>{
+         axios.get(`${baseUrl}/fetchAllEmp`)
             .then((response) => {
                 setusers(response.data)
             })
@@ -13,8 +18,12 @@ function UserTable() {
                 alert("Error in fetching users: " + error);
             })
 
+    }
 
-    }, [])
+    useEffect(() => {
+       fetchUsers();
+
+    }, [reload])
 
 
     return (

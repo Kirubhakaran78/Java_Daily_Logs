@@ -1,0 +1,51 @@
+/* Masters card look */
+.content-card {
+  background: #fff;
+  padding: 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  box-shadow: none;
+  margin-left: 0px !important;
+}
+
+/* Header */
+.content-header .page-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #111827;
+}
+.content-header small {
+  display: block;
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+/* Add button */
+.btn-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tabs */
+.master-tabs {
+  border-bottom: 1px solid #e6e6e6;
+}
+.master-tabs .nav-link {
+  padding: 12px 20px;
+  color: #000000;
+}
+
+.master-tabs .nav-link.active {
+  color: #086ef3;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-bottom-color: #fff;
+}
+
+/* table container */
+.table-wrapper {
+  margin-top: 12px;
+  overflow-x: auto;
+ margin-left: 0px !important;
+}

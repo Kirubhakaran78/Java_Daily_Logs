@@ -19,6 +19,8 @@ public class JDBCTempDaoImpl implements JDBCTempDao  {
 	@Override
 	public void saveEmp(String name, int age) {
 		String sql="Insert into jdbcTempPrac (name,age) values (?,?)";
+		
+		
 		jdbcTemplate.update(sql,name,age);
 		
 	}

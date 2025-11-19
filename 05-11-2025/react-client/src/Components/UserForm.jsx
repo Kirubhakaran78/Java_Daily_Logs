@@ -1,32 +1,40 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import axios from "axios";
+import config from "../config.json"
 
-function UserForm() {
+function UserForm({ onUserReload }) {
 
-const [formData,setFormData]=useState({name:"",age:"",email:""});
+  //config url path variables
+  let baseUrl=config.API_BASE_URL;
 
-
-const handleChange= (e)=>{
-    setFormData({...formData,[e.target.name] : e.target.name==="age"?Number(e.target.value): e.target.value});
-}
+  const [formData, setFormData] = useState({ name: "", age: "", email: "" });
 
 
-const handleSubmit= async(e)=>{
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.name === "age" ? Number(e.target.value) : e.target.value });
+  }
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response=await fetch("http://localhost:8082/api/users/saveEmp",{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify(formData)
-    })
+    //const response = await axios.post(url, data, config);
+    try {
+      await axios.post(`${baseUrl}/saveEmp`,
+        formData, // axios automatically converts to JSON
+        {
+          headers: { "Content-Type": "application/json" }
+        });
 
-    if(response.ok){
-        alert("User saved");
-        setFormData({name:"",age:"",email:""});
-    }else{
-        alert("error in saving");
+
+      alert("User saved");
+      setFormData({ name: "", age: "", email: "" });
+      onUserReload();
+    } catch (error) {
+      alert("Error saving user: " + error.message);
     }
 
-}
+  }
 
 
   return (
@@ -34,39 +42,39 @@ const handleSubmit= async(e)=>{
       <form onSubmit={handleSubmit} method='post'>
 
         <lable htmlFor="name">Name: </lable>
-        <input 
-        type="text"
-        id="name"
-        name="name"
-        placeholder='Enter name'
-        value={formData.name}
-        onChange={handleChange}
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder='Enter name'
+          value={formData.name}
+          onChange={handleChange}
         />
         <br /><br />
 
         <lable htmlFor="age">Age: </lable>
-        <input 
-        type="number"
-        id="age"
-        name="age"
-        placeholder='Enter age'
-        value={formData.age}
-        onChange={handleChange}
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder='Enter age'
+          value={formData.age}
+          onChange={handleChange}
         />
-         <br /><br />
+        <br /><br />
 
         <lable htmlFor="email">Email: </lable>
-        <input 
-        type="text"
-        id="email"
-        name="email"
-        placeholder='Enter email'
-        value={formData.email}
-        onChange={handleChange}
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder='Enter email'
+          value={formData.email}
+          onChange={handleChange}
         />
-         <br /><br />
+        <br /><br />
 
-         <button type='submit'>Add user</button>
+        <button type='submit'>Add user</button>
 
       </form>
     </div>

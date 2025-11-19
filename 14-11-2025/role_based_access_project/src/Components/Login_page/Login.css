@@ -1,0 +1,63 @@
+.login_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+   background-color: #6532f1 !important;
+   /* background-image: url('../../../public/bg.jpg') !important; */
+   background-position: center;
+   background-size: cover;
+   color: #ffffff !important;
+
+
+}
+
+.main_container{
+    border: 0px solid black;
+    padding: 80px;
+    background-color: #ffffff;
+    border-radius: 5px;
+     color: #000000;
+     border: solid;
+     box-shadow: 10px 10px 10px rgba(238, 237, 237,0);
+}
+
+/* .form_css{
+    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 30px;
+} */
+.form_css {
+  display: block;   /* stack inputs naturally */
+  margin-left: 30px;
+}
+
+
+.home_header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.validation-message {
+  min-height: 18px;   /* enough for one line of text */
+  font-size: 12px;
+  line-height: 1.2;
+  margin-top: 4px;
+  text-align: left;   /* aligns with input */
+}
+
+.forgot-password-placeholder {
+  min-height: 22px;   /* enough for one line of text */
+  margin-top: 4px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+
+
+
+
+
+

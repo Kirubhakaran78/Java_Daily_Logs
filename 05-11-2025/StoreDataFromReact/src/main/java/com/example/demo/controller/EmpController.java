@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.service.EmpService;
 
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin(origins="*")
 @RestController
-@RequestMapping("/api/users")
+//@RequestMapping("/api/users")
 public class EmpController {
 
 	@Autowired
