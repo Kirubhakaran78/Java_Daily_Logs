@@ -1,0 +1,11 @@
+.custom-share-modal {
+    max-width: 550px !important;
+    width: 550px !important;
+}
+
+.custom-share-modal .modal-content {
+    width: 100% !important;
+}
+
+
+
