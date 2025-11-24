@@ -1,0 +1,17 @@
+body {
+     /* background-color:rgb(198, 216, 233); */
+    background-color:#F2F4F7 !important;
+}
+
+.custom_dialog {
+    max-width: 500px !important;
+    /* match content width */
+    margin: auto !important;
+    /* center perfectly */
+}
+
+.custom_modal {
+    width: 500px !important;
+    height: 400px !important;
+    border-radius: 10px !important;
+}

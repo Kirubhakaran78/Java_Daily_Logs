@@ -1,0 +1,44 @@
+.fb-close-btn {
+    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/zY1TekFCJ__.png");
+    background-position: 0px -561px;
+    background-size: auto;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-color: "transparent";
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: #ffff;
+}
+
+.fb-close-wrapper {
+    background-color: #d6d3d399;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.fb-close-wrapper:hover {
+    background-color: #D8DADF;
+    /* Slightly darker on hover */
+}
+
+.story-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background-color 0.20s ease;
+    
+}
+
+.story-item:hover {
+    background-color: #E8E9EB;
+}
