@@ -95,6 +95,85 @@ CREATE TABLE revenue (
     UNIQUE(product_id, month_year)
 );
 
+-- Posts table
+CREATE TABLE posts (
+    id BIGSERIAL PRIMARY KEY,
+    profile_pic VARCHAR(500),
+    username VARCHAR(100) NOT NULL,
+    content TEXT,
+    file_type VARCHAR(20),
+    post_image VARCHAR(1000),
+    shares INTEGER DEFAULT 0,
+    liked BOOLEAN DEFAULT FALSE,
+    like_count INTEGER DEFAULT 0,
+    is_hidden BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- add column
+ALTER TABLE posts ADD COLUMN background_style VARCHAR(500);
+
+ALTER TABLE posts 
+ALTER COLUMN file_path TYPE VARCHAR(2000);
+
+SELECT column_name, data_type FROM information_schema.columns 
+WHERE table_name='posts';
+
+
+-- Comments table
+CREATE TABLE comments (
+    id BIGSERIAL PRIMARY KEY,
+    post_id BIGINT REFERENCES posts(id) ON DELETE CASCADE,
+    comment_user  VARCHAR(100) NOT NULL,
+    text TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert sample data
+INSERT INTO posts (profile_pic, username, content, file_type, post_image, shares, liked, like_count, is_hidden)
+VALUES 
+('https://randomuser.me/api/portraits/men/11.jpg', 'John Doe', 'Had a great day at the beach!', 'image', 'https://picsum.photos/seed/beach1/600/400', 4, false, 0, false),
+('https://randomuser.me/api/portraits/women/22.jpg', 'Emma Watson', 'Coffee + Rain = Perfect Morning ☕🌧️', 'image', 'https://picsum.photos/seed/coffee1/600/400', 2, false, 0, false);
+
+
+INSERT INTO posts 
+(profile_pic, username, content, file_type, post_image, shares, liked, like_count, is_hidden, background_style)
+VALUES
+('https://randomuser.me/api/portraits/men/32.jpg', 'Mike Johnson', 'Gym session done! Feeling pumped 💪', 'image', 'https://picsum.photos/seed/gym1/600/400', 1, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/women/44.jpg', 'Sophia Lee', 'Trying out a new recipe today 😋🍲', 'image', 'https://picsum.photos/seed/food1/600/400', 3, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/men/55.jpg', 'David Miller', 'Weekend vibes 😎', 'image', 'https://picsum.photos/seed/weekend1/600/400', 5, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/women/66.jpg', 'Ava Thompson', 'Sunset views never get old 🌅', 'image', 'https://picsum.photos/seed/sunset1/600/400', 5, false, 0, false, '#FFD700'),
+('https://randomuser.me/api/portraits/men/67.jpg', 'Chris Wilson', 'Road trip begins! 🚗💨', 'image', 'https://picsum.photos/seed/roadtrip1/600/400', 4, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/women/71.jpg', 'Isabella Brown', 'Movie night with friends 🎬', 'image', 'https://picsum.photos/seed/movie1/600/400', 2, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/men/72.jpg', 'Liam Anderson', 'Nature walk today 🌿🌳', 'image', 'https://picsum.photos/seed/nature1/600/400', 1, false, 0, false, '#C1E1C1'),
+('https://randomuser.me/api/portraits/women/80.jpg', 'Mia Davis', 'Celebrating small wins ✨', 'image', 'https://picsum.photos/seed/celebration1/600/400', 3, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/men/81.jpg', 'Noah Martinez', 'Exploring downtown 🏙️', 'image', 'https://picsum.photos/seed/city1/600/400', 2, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/women/82.jpg', 'Olivia Harris', 'Love this cozy weather ❤️', 'image', 'https://picsum.photos/seed/cozy1/600/400', 4, false, 0, false, '#FFB6C1'),
+('https://randomuser.me/api/portraits/men/83.jpg', 'James King', 'New haircut! What do you think? 💇‍♂️', 'image', 'https://picsum.photos/seed/haircut1/600/400', 5, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/women/84.jpg', 'Emily Clark', 'Feeling grateful today 🤍', 'image', 'https://picsum.photos/seed/grateful1/600/400', 1, false, 0, false, '#E0FFFF'),
+('https://randomuser.me/api/portraits/men/85.jpg', 'William Scott', 'Just finished a great book 📘', 'image', 'https://picsum.photos/seed/book1/600/400', 3, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/women/86.jpg', 'Ella Adams', 'Baking cookies today 🍪', 'image', 'https://picsum.photos/seed/cookies1/600/400', 6, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/men/87.jpg', 'Benjamin Parker', 'Morning jog completed 🏃‍♂️', 'image', 'https://picsum.photos/seed/jog1/600/400', 2, false, 0, false, '#F5DEB3'),
+('https://randomuser.me/api/portraits/women/88.jpg', 'Charlotte Evans', 'New art project 🎨', 'image', 'https://picsum.photos/seed/art1/600/400', 4, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/men/89.jpg', 'Henry Turner', 'Trying photography 📸', 'image', 'https://picsum.photos/seed/photo1/600/400', 3, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/women/90.jpg', 'Grace Bennett', 'Fresh flowers for my room 🌸', 'image', 'https://picsum.photos/seed/flowers1/600/400', 1, false, 0, false, '#FF69B4'),
+('https://randomuser.me/api/portraits/men/91.jpg', 'Daniel Rivera', 'Late-night coding session 💻', 'image', 'https://picsum.photos/seed/coding1/600/400', 4, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/women/92.jpg', 'Victoria Hughes', 'Spa day feels 🧖‍♀️', 'image', 'https://picsum.photos/seed/spa1/600/400', 2, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/men/93.jpg', 'Andrew Collins', 'Barbecue night with family 🍗🔥', 'image', 'https://picsum.photos/seed/bbq1/600/400', 5, false, 0, false, '#FFDAB9'),
+('https://randomuser.me/api/portraits/women/94.jpg', 'Hannah Foster', 'New outfit today 💃', 'image', 'https://picsum.photos/seed/outfit1/600/400', 1, false, 0, false, NULL),
+('https://randomuser.me/api/portraits/men/95.jpg', 'Samuel Green', 'Enjoying some peaceful reading time 📖', 'image', 'https://picsum.photos/seed/reading1/600/400', 2, false, 0, false, NULL);
+
+
+
+
+
+-- Sample comments
+INSERT INTO comments (post_id, comment_user, text)
+VALUES 
+(1, 'Alice', 'Looks amazing!'),
+(1, 'Bob', 'Wish I was there!'),
+(2, 'Charlie', 'Perfect combination!');
+
 -- =====================================================
 -- TABLE: employee_audit (Audit Log)
 -- =====================================================
@@ -169,6 +248,7 @@ AFTER UPDATE ON employee
 FOR EACH ROW
 EXECUTE FUNCTION fn_employee_audit();
 
+
 INSERT INTO loginTable (username, password, role, product_name) VALUES
 ('admin', 'admin123', 'ADMIN', NULL),
 ('manager_lims', 'manager123', 'MANAGER', 'LIMS'),
@@ -183,6 +263,8 @@ SELECT * FROM employee;
 SELECT * FROM product;
 SELECT * FROM revenue;
 SELECT * FROM employee_audit;
+SELECT * FROM posts;
+SELECT * FROM comments;
 
 -- Remove status trigger
 -- DROP TRIGGER IF EXISTS trg_update_status ON employee;

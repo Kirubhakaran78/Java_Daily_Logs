@@ -20,6 +20,14 @@ import "./FbHome.css"
 
 //modal for create post
 function CreatePostModal(props) {
+
+    //image/video input
+    const fileInputRef = useRef(null);
+
+    //handle input image and video
+    const openFilePicker = () => {
+        fileInputRef.current.click();
+    }
     return (
         <Modal
             {...props}
@@ -65,9 +73,84 @@ function CreatePostModal(props) {
                         justifyContent: "space-between",
                         alignItems: "center"
                     }}>
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v4/y7/r/Ivw7nhRtXyo.png" alt="video image icon" style={{ marginLeft: "10px" }} />
+
+                        {/* image has file input */}
+                        <div style={{
+                            width: '36px',
+                            height: '36px',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            transition: 'background-color 0.2s',
+                            marginLeft: "10px"
+                        }}
+                            onClick={openFilePicker}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f0f2f5'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v4/y7/r/Ivw7nhRtXyo.png" alt="video image icon"  />
+
+                            {/* hidden input */}
+                            <input type="file" ref={fileInputRef}
+                            accept='image/*,video/*'
+                            style={{display:"none"}}
+                            onChange={(e)=> e.console.log(e.target.files[0])}
+                            />
+
+                        </div>
+
+                        {/* image has contact */}
+                         <div style={{
+                            width: '36px',
+                            height: '36px',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            transition: 'background-color 0.2s',
+                            marginLeft: "10px"
+                        }}
+                            onClick={openFilePicker}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f0f2f5'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                         <img src="https://static.xx.fbcdn.net/rsrc.php/v4/yq/r/b37mHA1PjfK.png" alt="contact icon" style={{ marginLeft: "10px" }} />
+                        </div>
+
+
+                        <div style={{
+                            width: '36px',
+                            height: '36px',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            transition: 'background-color 0.2s',
+                            marginLeft: "10px"
+                        }}
+                            onClick={openFilePicker}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f0f2f5'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}></div>
                         <img src="https://static.xx.fbcdn.net/rsrc.php/v4/yd/r/Y4mYLVOhTwq.png" alt="smile icon" style={{ marginLeft: "10px" }} />
+
+
+                        <div style={{
+                            width: '36px',
+                            height: '36px',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            transition: 'background-color 0.2s',
+                            marginLeft: "10px"
+                        }}
+                            onClick={openFilePicker}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f0f2f5'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}></div>
+                            
                         <img src="https://static.xx.fbcdn.net/rsrc.php/v4/y1/r/8zlaieBcZ72.png" alt="location icon" style={{ marginLeft: "10px" }} />
                         <img src="https://static.xx.fbcdn.net/rsrc.php/v4/yT/r/q7MiRkL7MLC.png" alt="gif icon" style={{ marginLeft: "10px" }} />
                         <img src="https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/c0dWho49-X3.png" alt="live video icon" style={{ marginLeft: "10px" }} />
@@ -81,7 +164,7 @@ function CreatePostModal(props) {
                             justifyContent: 'center',
                             cursor: 'pointer',
                             transition: 'background-color 0.2s',
-                            marginLeft:"10px"
+                            marginLeft: "10px"
                         }}
                             // onClick={() => setOpenMenuPostId(openMenuPostId === post.id ? null : post.id)} //same post click it will be closed
                             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f0f2f5'}
@@ -397,6 +480,8 @@ function FbHome() {
     //show the create post modal
     const [createModalShow, setCreateModalShow] = useState(false);
 
+
+
     const handleLike = (id) => {
         setPostList(prevPosts => {
             const updated = prevPosts.map(post =>
@@ -534,6 +619,7 @@ function FbHome() {
     const handleCreatePost = () => {
         setCreateModalShow(true);
     }
+
 
 
     return (
