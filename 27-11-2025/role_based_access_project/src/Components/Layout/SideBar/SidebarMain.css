@@ -1,0 +1,76 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+
+.sidebar-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 70px;
+  background-color: #0049B2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  z-index: 1000; /* stay above other elements */
+}
+
+
+
+
+.sidebar-btn {
+  color: #ffffff;           /* for react-icons */
+  transition: color 0.2s ease;
+}
+
+.sidebar-btn:hover {
+  color: white;
+  transform: scale(1.5);
+}
+
+.sidebar-btn-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+    margin-top: 15px;
+}
+
+.sidebar-label {
+  position: absolute;
+  bottom: -20px;
+  /* left:4px; */
+  /* background-color: rgba(13, 86, 243, 0.911); */
+  color: white;
+
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+
+
+.sidebar-btn-wrapper:hover .sidebar-label {
+  opacity: 1;
+}
+
+/* when click the icon it will stay has same as when we hover */
+
+.sidebar-btn-wrapper.active .sidebar-btn {
+  transform: scale(1.5);
+}
+
+.sidebar-btn-wrapper.active .sidebar-label {
+  opacity: 1;
+}

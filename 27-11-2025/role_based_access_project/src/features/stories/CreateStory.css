@@ -1,0 +1,19 @@
+.create_story_card:hover{
+cursor: pointer;
+opacity: 0.9;
+}
+
+.create_story_left_Options:hover{
+background-color: #f4f4f5;
+cursor: pointer;
+border-radius: 5px;
+padding: 8px;
+}
+
+.custom-backdrop {
+  z-index: 10000 !important;
+}
+
+.modal {
+  z-index: 10001 !important;
+}

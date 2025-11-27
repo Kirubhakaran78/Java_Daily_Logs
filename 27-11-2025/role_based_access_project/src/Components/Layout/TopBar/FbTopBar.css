@@ -1,0 +1,100 @@
+.fb-sprite-icon {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/uKFDlQgEw6u.png");
+  background-position: 0px -302px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.profile-btn {
+  width: 270px;
+  height: 36px;
+  border: none;
+  background: #E2E5E9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding-left: 12px;
+  border-radius: 6px;
+  margin: 8px 8px 16px 8px;
+}
+
+.profile-btn:hover {
+  background: #e5e5e5;
+  border-radius: 6px;
+}
+
+.btn-text {
+  font-size: 15px;
+  font-family: "Segoe UI Historic", sans-serif;
+  color: black;
+  font-weight: 600;
+}
+
+.end-text {
+  font-size: 13px;
+
+}
+
+.end-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* css for the fb nav link */
+
+/* Center nav layout */
+.fb-center-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-grow: 1;
+}
+
+/* Remove default highlight */
+.nav-link {
+    padding: 10px 15px;
+    color: #65676b !important;
+}
+
+.nav-link:focus,
+.nav-link:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Icons */
+.fb-icon {
+    width: 26px;
+    height: 26px;
+    color: #65676b;
+    transition: 0.25s ease;
+}
+
+/* Active = Blue icon + underline */
+.nav-link.active .fb-icon {
+    color: #0866ff !important;
+}
+
+.nav-link.active {
+    border-bottom: 3px solid #0866ff;
+    border-radius: 0;
+}
+
+
+.fb-nav-link {
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 60px;
+}
+
+.fb-nav-link.active {
+    border-bottom: 3px solid #0866ff;  /* Facebook blue line */
+    color: #0866ff;                    /* make icon blue */
+}
