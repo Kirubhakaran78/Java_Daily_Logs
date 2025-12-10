@@ -1,0 +1,22 @@
+.top-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px !important;
+}
+
+.top-right-icons .dropdown-toggle {
+  background-color: #E2E5E9 !important;
+  border-radius: 50%;
+  padding: 6px !important;
+  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-right-icons img,
+.top-right-icons svg {
+  width: 20px;
+  height: 20px;
+}
+

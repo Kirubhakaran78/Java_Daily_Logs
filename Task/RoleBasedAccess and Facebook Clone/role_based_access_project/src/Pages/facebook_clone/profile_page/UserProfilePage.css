@@ -1,0 +1,23 @@
+body {
+    background-color: #ffffff;
+}
+
+.cover_picture_div {
+    max-width: 1250px;
+    width: 100%;
+    height: 462.95px;
+    background-color: #F2F4F7;
+    border-radius: 10px;
+    position: relative;
+}
+
+@media (min-width:0px) and (max-width:650px) {
+    .cover_picture_div {
+        height: 152px;
+        max-width: 1250px;
+        width: 100%;
+        background-color: #F2F4F7;
+        border-radius: 10px;
+        position: relative;
+    }
+}

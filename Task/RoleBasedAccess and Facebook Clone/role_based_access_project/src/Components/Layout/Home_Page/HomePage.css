@@ -1,0 +1,51 @@
+:root {
+  --sidebar-width: 250px;
+  --topbar-height: 60px;
+}
+
+.home_page {
+  min-height: 100vh;
+  background-color: #F2F4F7;
+  padding-top: var(--topbar-height); /* push content under TopBar visually */
+}
+
+/* Sidebar container remains fixed */
+.sidebar-container {
+  width: var(--sidebar-width);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-color: #0f57b3; /* navy-like from your screenshot */
+  color: #fff;
+  padding-top: var(--topbar-height); /* allow topbar space */
+  overflow-y: auto;
+
+}
+
+/* Main content area */
+/* .main-content {
+  margin-left: var(--sidebar-width);
+  padding: 20px;
+  width: calc(100% - var(--sidebar-width));
+  min-height: calc(100vh - var(--topbar-height));
+  padding-top: 24px; /* extra spacing under TopBar */
+/* } */ 
+
+.main-content {
+  flex-grow: 1;         /* fills remaining space */
+  /* padding: 20px;        some breathing room */
+  margin-left: 70px;    /* same as sidebar width */
+  background-color: #f9f9f9;  /* optional */
+  min-height: 100vh;
+   transition: margin-left 0.3s ease;
+}
+
+
+/* On mobile, remove the left margin when sidebar is hidden */
+@media (max-width: 1080px) {
+  .main-content {
+    margin-left: 0 !important;
+    
+  }
+}

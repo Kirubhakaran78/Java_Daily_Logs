@@ -1,0 +1,96 @@
+.fb-close-btn {
+    background-image: url("https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/zY1TekFCJ__.png");
+    background-position: 0px -561px;
+    background-size: auto;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-color: "transparent";
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: #ffff;
+    filter: brightness(0) invert(1);
+}
+
+.fb-close-wrapper {
+    background-color: #00000066;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.fb-close-wrapper:hover {
+    background-color: #6d6d6d99;
+   
+}
+
+.story-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background-color 0.20s ease;
+    
+}
+
+.story-item:hover {
+    background-color: #E8E9EB;
+}
+
+
+.input-container {
+  position: relative;
+  width: 250px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 8px 35px 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.input-container .smile_icon {
+  position: absolute;
+  margin-left: 430px;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 30px;
+  transform: translateY(-50%);
+  filter: brightness(0) invert(1);
+  pointer-events: auto; 
+  cursor: pointer;
+}
+
+.input-container .send_icon {
+  position: absolute;
+  margin-left: 470px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-70%);
+  filter: brightness(0) invert(1);
+  pointer-events: auto; 
+  cursor: pointer;
+}
+
+.pause-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+ 
+

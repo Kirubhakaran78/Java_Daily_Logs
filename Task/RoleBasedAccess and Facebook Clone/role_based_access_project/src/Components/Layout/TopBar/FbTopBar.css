@@ -1,0 +1,284 @@
+/* .fb-sprite-icon {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/uKFDlQgEw6u.png");
+  background-position: 0px -302px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.profile-btn {
+  width: 270px;
+  height: 36px;
+  border: none;
+  background: #E2E5E9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding-left: 12px;
+  border-radius: 6px;
+  margin: 8px 8px 16px 8px;
+}
+
+.profile-btn:hover {
+  background: #e5e5e5;
+  border-radius: 6px;
+}
+
+.btn-text {
+  font-size: 15px;
+  font-family: "Segoe UI Historic", sans-serif;
+  color: black;
+  font-weight: 600;
+}
+
+.end-text {
+  font-size: 13px;
+
+}
+
+.end-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.fb-center-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-grow: 1;
+}
+
+
+.nav-link {
+    padding: 10px 15px;
+    color: #65676b !important;
+}
+
+.nav-link:focus,
+.nav-link:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+
+.fb-icon {
+    width: 26px;
+    height: 26px;
+    color: #65676b;
+    transition: 0.25s ease;
+}
+
+
+.nav-link.active .fb-icon {
+    color: #0866ff !important;
+}
+
+.nav-link.active {
+    border-bottom: 3px solid #0866ff;
+    border-radius: 0;
+}
+
+
+.fb-nav-link {
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 60px;
+}
+
+.fb-nav-link.active {
+    border-bottom: 3px solid #0866ff;  
+    color: #0866ff;                  
+}
+
+
+@media (min-width:0px) and  (max-width:1074px){
+  .fb-center-nav{
+    display: none;
+  }
+} */
+
+
+
+.fb-sprite-icon {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/uKFDlQgEw6u.png");
+  background-position: 0px -302px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.profile-btn {
+  width: 270px;
+  height: 36px;
+  border: none;
+  background: #E2E5E9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding-left: 12px;
+  border-radius: 6px;
+  margin: 8px 8px 16px 8px;
+}
+
+.profile-btn:hover {
+  background: #e5e5e5;
+  border-radius: 6px;
+}
+
+.btn-text {
+  font-size: 15px;
+  font-family: "Segoe UI Historic", sans-serif;
+  color: black;
+  font-weight: 600;
+}
+
+.end-text {
+  font-size: 13px;
+}
+
+.end-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ADDED: Allow container to wrap */
+.topbar .container-fluid {
+    flex-wrap: wrap !important;
+}
+
+.fb-center-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-grow: 1;
+}
+
+.nav-link {
+    padding: 10px 15px;
+    color: #65676b !important;
+}
+
+.nav-link:focus,
+.nav-link:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.fb-icon {
+    width: 26px;
+    height: 26px;
+    color: #65676b;
+    transition: 0.25s ease;
+}
+
+.nav-link.active .fb-icon {
+    color: #0866ff !important;
+}
+
+.nav-link.active {
+    border-bottom: 3px solid #0866ff;
+    border-radius: 0;
+}
+
+.fb-nav-link {
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 60px;
+}
+
+.fb-nav-link.active {
+    border-bottom: 3px solid #0866ff;  
+    color: #0866ff;                  
+}
+
+
+/* MODIFIED: Responsive layout instead of hiding */
+@media (min-width:0px) and (max-width:1074px){
+  .fb-center-nav{
+    display: flex !important; /* Keep visible instead of display: none */
+    order: 3; /* Move to bottom row */
+    width: 100%; /* Full width */
+    justify-content: space-around; /* Distribute evenly */
+    gap: 0; /* Remove gap */
+    padding: 0 20px; /* Side padding */
+    margin-top: 8px; /* Space from first row */
+    margin-bottom: 8px; /* ADD THIS: Space below center nav */
+    padding-bottom: 8px; /* ADD THIS: Extra padding at bottom */
+  }
+  
+  /* ADDED: Allow navbar to expand */
+  .topbar {
+    height: auto !important;
+    min-height: 60px;
+    padding-top: 8px;
+    padding-bottom: 12px; /* INCREASED: More bottom padding */
+    left: 0 !important;
+  }
+
+  /* Spacer to prevent content hiding */
+.topbar-spacer {
+  height: 60px; /* Same as topbar height */
+}
+  
+  /* ADDED: Smaller nav links on mobile */
+  .fb-nav-link {
+    width: 60px;
+    height: 50px;
+  }
+}
+
+/* ADD THIS at the bottom of FbTopBar.css */
+
+/* Show hamburger only on mobile */
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 1074px) {
+  .hamburger-menu {
+    display: block !important;
+  }
+  
+  /* Make topbar full width */
+  .topbar {
+    width: 100% !important;
+  }
+  
+  .topbar .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Adjust spacer for increased height */
+  .topbar-spacer {
+    background-color: #F2F4F7;
+    height: 100px; /* Increased height when nav wraps to second row */
+  }
+}
+
+.profileImageName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.profileImageName:hover{
+  background-color: #e8eaec;
+  cursor:pointer;
+  border-radius: 10px;
+}

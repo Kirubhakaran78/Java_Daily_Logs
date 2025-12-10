@@ -1,0 +1,21 @@
+export const FONT_LIST = [
+  "Roboto",
+  "Open Sans",
+  "Poppins",
+  "Montserrat",
+  "Inter",
+  "Lato",
+  "Nunito",
+  "Raleway",
+  "Ubuntu",
+  "Work Sans",
+  "Oswald",
+  "Playfair Display",
+  "Merriweather",
+  "Lora",
+  "Bitter",
+  "Crimson Text",
+  "Fira Code",
+  "Source Code Pro",
+  "JetBrains Mono"
+];
